@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery.js"></script>
+    <script src="followMe.js"></script>
+    <style type="text/css">
+        body,p {
+            font-size: 16px;
+            font-family: "Microsoft YaHei", "arial", "sans-serif";
+        }
+        .wrap {
+            margin: 10% auto;
+            width: 960px;
+        }
+        .btn {
+            float: right;
+        }
+        .single {
+            margin-bottom: 15px;
+        }
+        .c {
+            clear: both;
+        }
+        img {
+            max-width: none;
+        }
+        .btn {
+            -moz-user-select: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.4;
+            margin-bottom: 0;
+            padding: 6px 12px;
+            text-align: center;
+            vertical-align: middle;
+            white-space: nowrap;
+            background-color: #5cb85c;
+            border-color: #4cae4c;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="single">
+        <h2>第一步</h2>
+        <p>FollowMe第一步</p>
+        <a class="btn btn-success" id="step1" href="#">第一步</a>
+        <div class="c"></div>
+    </div>
+    <div class="single">
+        <h2>第二步</h2>
+        <p>FollowMe第二步</p>
+        <a class="btn btn-success" id="step2" href="#">第二步</a>
+        <div class="c"></div>
+    </div>
+    <div class="single">
+        <h2>第三步</h2>
+        <p>FollowMe第三步</p>
+        <a class="btn btn-success" id="step3" href="#">第三步</a>
+        <div class="c"></div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        $(this).followMe({
+            ele : ['#step1', '#step2', '#step3'],
+            img : ['1.png', '2.png', '3.png'],
+            txt : [
+                '这是步骤一提示语',
+                '这是步骤二提示语',
+                '这是步骤三提示语'
+            ]
+        }).start();
+    });
+</script>
+
+
+</body>
+</html>
